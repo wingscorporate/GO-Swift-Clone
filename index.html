@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SWIFT Shipping Aggregator Dashboard</title>
+    <meta name="description" content="Production-grade Indian e-commerce multi-courier shipping aggregator platform with real-time rate calculator, label generation, order fulfillment, tracking, NDR, and prepaid wallet." />
+    <meta property="og:title" content="SWIFT Shipping Aggregator Dashboard" />
+    <meta property="og:description" content="Production-grade Indian e-commerce multi-courier shipping aggregator platform with real-time rate calculator, label generation, order fulfillment, tracking, NDR, and prepaid wallet." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Defensive patch: Ensure window.fetch is writable with both getter and setter
+      // Prevents "TypeError: Cannot set property fetch of #<Window> which has only a getter"
+      // when browser extensions or sandboxes intercept fetch.
+      (function() {
+        try {
+          var _origFetch = (typeof window.fetch === 'function')
+            ? window.fetch.bind(window)
+            : window.fetch;
+
+          Object.defineProperty(window, 'fetch', {
+            configurable: true,
+            enumerable: true,
+            get: function() {
+              return _origFetch;
+            },
+            set: function(fn) {
+              _origFetch = fn;
+            }
+          });
+        } catch (e) {
+          // Fallback if property definition is restricted
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-[#F2F4F6] text-slate-800 antialiased font-sans">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

@@ -1,0 +1,6 @@
+{
+  "name": "SWIFT Shipping Aggregator Dashboard",
+  "description": "Production-grade Indian e-commerce multi-courier shipping aggregator platform with real-time rate calculator, label generation, order fulfillment, tracking, NDR, and prepaid wallet.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
